@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neo4j + Sigma.js</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+    	html,body{
+    		margin:0;
+    		width:100vw;
+    		height:100vh;
+        font-family: 'Montserrat', sans-serif;
+    	}
+
+    	#root{
+    		width:100vw;
+    		height:100vh;
+        background-color: rgb(240,240,240);
+    	}
+
+      #box{
+        position:fixed;
+        left:calc(100vw - 250px);
+        width:200px; 
+        padding:10px;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        top:40px;
+        gap:10px;
+        box-shadow: 0px 0px 6px 6px lightgrey;
+        background-color: white;
+      }
+
+      #box input{
+        font-family: 'Montserrat', sans-serif;  
+      }
+
+      #box button{
+        font-family: 'Montserrat', sans-serif;
+        padding:10px;
+        background-color:rgb(77, 148, 255);
+        color:white;
+        font-weight:bold;
+        border:0px black solid;
+      }
+    </style>
+  </head>
+  <body>
+  	<div id="box">
+      <h3><b>Settings</b></h3>
+  		<input type="text" id="db_url" placeholder="Enter DB url">
+  		<input type="text" id="username" placeholder="Username">
+  		<input type="text" id="password" placeholder="Password">
+  		<input type="text" id="query" placeholder="Enter Query">
+  		<button id="form_submit" onclick="submitForm()">Apply</button>
+  	</div>
+
+
+  	<div id="root"></div>
+    <script src="./renderer.js"></script>
+    <!--
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/utils/sigma.utils.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.neo4j.cypher.min.js"></script>
+  	
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-sigma@1.2/dist/react-sigma.min.js"/>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./renderer.js"></script>
+    <script type="text/babel">
+    	import {Sigma, RandomizeNodePositions, RelativeSize} from 'react-sigma';
+		import React from 'react';
+		import ReactDOM from 'react-dom/client';
+		let graph = { nodes:[], edges:[]} ;
+
+		const root = ReactDOM.createRoot(document.getElementById("root"));
+
+		root.render(<Sigma renderer="canvas" graph={graph} settings={{clone: false}}/>);
+
+    </script>-->
+    <script>   
+      /*var s = new sigma(
+        {
+           renderer: {
+             container: document.getElementById('root'),
+             type: 'canvas'
+           },
+           settings: {}
+         }
+       );
+var graph = {
+  nodes: [
+    { id: "n0", label: "A node", x: 0, y: 0, size: 3, color: '#008cc2' },
+    { id: "n1", label: "Another node", x: 3, y: 1, size: 2, color: '#008cc2' },
+    { id: "n2", label: "And a last one", x: 1, y: 3, size: 1, color: '#E57821' }
+  ],
+  edges: [
+    { id: "e0", source: "n0", target: "n1", color: '#282c34', type:'line', size:0.5 },
+    { id: "e1", source: "n1", target: "n2", color: '#282c34', type:'curve', size:1},
+    { id: "e2", source: "n2", target: "n0", color: '#FF0000', type:'line', size:2}
+  ]
+}
+
+// Load the graph in sigma
+s.graph.read(graph);
+// Ask sigma to draw it
+s.refresh();*/
+
+    </script>
+     </body>
+</html>
